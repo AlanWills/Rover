@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LoadEngineSystemSceneSet
   m_EditorClassIdentifier: 
   sceneSet: {fileID: 11400000, guid: 7666a426237147c4eb0c79594020536b, type: 2}
-  loadSceneMode: 0
+  loadSceneMode: 1
   unloadUnusedAssets: 1
