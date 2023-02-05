@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scenes:
   - sceneType: 1
-    sceneId: Bootstrap
-  - sceneType: 1
     sceneId: Loading
+  - sceneType: 1
+    sceneId: Bootstrap
   unloadResourcesOnLoad: 1
   checkForMissingComponents: 1
   isDebugBuild: {fileID: 0}
