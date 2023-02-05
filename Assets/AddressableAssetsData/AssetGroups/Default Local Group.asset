@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c11e74db19bb51947beeeb6092b399d1
+  m_SerializeEntries:
+  - m_GUID: ab8a7a9362ce03f45b88ba6eac52fd9e
+    m_Address: EngineSystems
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7666a426237147c4eb0c79594020536b
+    m_Address: Assets/EngineSystems/Scenes/EngineSystemsSceneSet.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ddf26ce88798864bb07d8c272f29019
+    m_Address: Assets/Bootstrap/Steps/LoadEngineSystemSceneSet.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: add0fd9a08e18c24094838e2ef613741
+    m_Address: Assets/Bootstrap/Steps/BootstrapLoadJob.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a6936caeb4ef794b97c02c63703e179
+    m_Address: Bootstrap
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7823862e3ce82ea4aa71e4313a33b472
+    m_Address: Assets/Bootstrap/Scenes/BootstrapSceneSet.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: e997c81608f5bcc448ce2e603ae14c0f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ff4bd7c162592a04888bd9919ce53aa7, type: 2}
+    - {fileID: 11400000, guid: af91bb6742775f74bb70d96fe5d51d09, type: 2}
