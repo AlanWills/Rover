@@ -1,0 +1,20 @@
+{
+    "name": "Rover.Home",
+    "rootNamespace": "Rover.Home",
+    "references": [
+        "Rover.Core",
+        "Celeste.Memory",
+        "Celeste.Tools",
+        "Celeste.Components",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

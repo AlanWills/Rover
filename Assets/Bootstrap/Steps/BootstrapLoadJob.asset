@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadJobs:
   - {fileID: 11400000, guid: 6ddf26ce88798864bb07d8c272f29019, type: 2}
+  - {fileID: 11400000, guid: 505a8ff5a18c07f4a820fd6846a8cfe2, type: 2}

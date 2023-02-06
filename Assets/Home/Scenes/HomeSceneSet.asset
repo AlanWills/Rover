@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab7b176a7f956c24796f958773817cef, type: 3}
-  m_Name: BootstrapSceneSet
+  m_Name: HomeSceneSet
   m_EditorClassIdentifier: 
   scenes:
   - sceneType: 1
-    sceneId: Loading
+    sceneId: EngineSystems
   - sceneType: 1
-    sceneId: Bootstrap
+    sceneId: GameSystems
+  - sceneType: 1
+    sceneId: GameSystemsDebug
+  - sceneType: 1
+    sceneId: Home
   unloadResourcesOnLoad: 1
   isDebugBuild: {fileID: 11400000, guid: 50039586d3d71834c8dbb6af9cae319c, type: 2}
   checkForMissingComponents: 1

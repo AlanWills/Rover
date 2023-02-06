@@ -1,0 +1,23 @@
+{
+    "name": "Rover.Core.Editor",
+    "rootNamespace": "RoverEditor.Core",
+    "references": [
+        "Rover.Core",
+        "Celeste.Components",
+        "Celeste.Components.Editor",
+        "Celeste.Tools.Editor",
+        "Celeste.DataStructures.Editor",
+        "Celeste.Objects.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

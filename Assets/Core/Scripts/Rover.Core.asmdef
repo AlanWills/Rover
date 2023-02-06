@@ -1,0 +1,23 @@
+{
+    "name": "Rover.Core",
+    "rootNamespace": "Rover.Core",
+    "references": [
+        "Celeste.Components",
+        "Celeste.Objects",
+        "Celeste.Persistence",
+        "Celeste.OdinSerializer",
+        "Celeste.Events",
+        "Celeste.Debug",
+        "Celeste.Tools",
+        "Celeste.DataStructures"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
