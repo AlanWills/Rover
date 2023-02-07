@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1118857018300210603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: StaticInfoAnimalComponent
-  m_EditorClassIdentifier: Rover.Core:Rover.Core.Components:StaticInfoAnimalComponent
-  displayName: Test Animal
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,5 +13,33 @@ MonoBehaviour:
   m_Name: TestAnimal
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -1118857018300210603}
+  - {fileID: 4291102237551266988}
+  - {fileID: 4981348192765410074}
   guid: 1
+--- !u!114 &4291102237551266988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65331d36f2e057478ac7e4d8236e4a6, type: 3}
+  m_Name: StaticInfoAnimalComponent
+  m_EditorClassIdentifier: 
+  displayName: Test Animal
+--- !u!114 &4981348192765410074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff84ad5521d6db6429bc0fa8c5e1fd3d, type: 3}
+  m_Name: ExerciseCountdownAnimalComponent
+  m_EditorClassIdentifier: 
+  scheduledCallbacks: {fileID: 11400000, guid: 0a82179c33ce5814db9bd7870e0c1224, type: 2}
+  exerciseCountdownInSeconds: 60
