@@ -6,7 +6,9 @@
         "Celeste.Memory",
         "Celeste.Tools",
         "Celeste.Components",
-        "Unity.TextMeshPro"
+        "Celeste.Events",
+        "Unity.TextMeshPro",
+        "RecyclableScrollRect"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -40,6 +40,7 @@ namespace Rover.Home.UI
             {
                 GameObject animalPanelUIGameObject = animalPanelUIControllerAllocator.Allocate();
                 AnimalPanelUIController animalPanelUIController = animalPanelUIGameObject.GetComponent<AnimalPanelUIController>();
+                animalPanelUIGameObject.SetActive(true);
 
                 if (i < animalRecord.NumCurrentAnimals)
                 {
@@ -49,8 +50,6 @@ namespace Rover.Home.UI
                 {
                     animalPanelUIController.HookupEmpty();
                 }
-
-                animalPanelUIGameObject.SetActive(true);
             }
         }
 

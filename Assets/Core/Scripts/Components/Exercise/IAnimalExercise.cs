@@ -17,6 +17,6 @@ namespace Rover.Core.Components
 
         void StartExercise(Instance instance);
         void FinishExercise(Instance instance);
-        void Complete(Instance instance);
+        void CompleteExercise(Instance instance);
     }
 }

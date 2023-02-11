@@ -1,6 +1,8 @@
 ﻿using Celeste.Persistence;
+using Rover.Core.Objects;
 using Rover.Core.Persistence;
 using Rover.Core.Record;
+using Rover.Core.Runtime;
 using UnityEngine;
 
 namespace Rover.Core.Managers
@@ -15,6 +17,7 @@ namespace Rover.Core.Managers
 
         [SerializeField] private AnimalRecordSetup animalRecordSetup;
         [SerializeField] private AnimalRecord animalRecord;
+        [SerializeField] private AnimalCatalogue animalCatalogue;
 
         #endregion
 
@@ -28,6 +31,17 @@ namespace Rover.Core.Managers
         protected override void Deserialize(AnimalRecordDTO dto)
         {
             animalRecord.MaxNumAnimals = dto.maxNumAnimals;
+
+            foreach (AnimalRuntimeDTO animalDTO in dto.currentAnimals)
+            {
+                Animal animal = animalCatalogue.FindByGuid(animalDTO.guid);
+                UnityEngine.Debug.Assert(animal != null, $"Could not find animal with guid {animalDTO.guid}.");
+
+                AnimalRuntime animalRuntime = new AnimalRuntime(animal);
+                animalRuntime.InitializeComponents(animal);
+                animalRuntime.LoadComponents(animalDTO.components);
+                animalRecord.AddAnimal(animalRuntime);
+            }
         }
 
         protected override void SetDefaultValues()

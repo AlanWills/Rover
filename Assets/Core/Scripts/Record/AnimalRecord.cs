@@ -41,13 +41,26 @@ namespace Rover.Core.Record
             maxNumAnimals = setup.startingMaxAvailableAnimals;
         }
 
-        public void AddAnimal(Animal animal)
+        public void AddAnimal(AnimalRuntime animalRuntime)
         {
+            UnityEngine.Debug.Assert(NumCurrentAnimals < MaxNumAnimals, $"Could not add animal {animalRuntime.Guid} because we already have the maximum number.");
             if (NumCurrentAnimals < MaxNumAnimals)
             {
-                AnimalRuntime animalRuntime = new AnimalRuntime(animal);
-                animalRuntime.InitializeComponents(animal);
+                animalRuntime.ComponentDataChanged.AddListener(OnAnimalComponentDataChanged);
                 currentAnimals.Add(animalRuntime);
+                onChange.Invoke();
+            }
+        }
+
+        public void RemoveAnimal(int index)
+        {
+            if (index < NumCurrentAnimals)
+            {
+                AnimalRuntime animalRuntime = currentAnimals[index];
+                animalRuntime.ComponentDataChanged.RemoveListener(OnAnimalComponentDataChanged);
+                animalRuntime.ShutdownComponents();
+                currentAnimals.RemoveAt(index);
+
                 onChange.Invoke();
             }
         }
@@ -56,5 +69,24 @@ namespace Rover.Core.Record
         {
             return currentAnimals.Get(index);
         }
+
+        #region Callbacks
+
+        private void OnAnimalComponentDataChanged()
+        {
+            for (int i = NumCurrentAnimals - 1; i >= 0; --i)
+            {
+                var animal = GetAnimal(i);
+
+                if (animal.ExerciseState == Components.ExerciseState.Completed)
+                {
+                    RemoveAnimal(i);
+                }
+            }
+
+            onChange.Invoke();
+        }
+
+        #endregion
     }
 }

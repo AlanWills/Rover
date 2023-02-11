@@ -85,11 +85,19 @@ namespace Rover.Core.Runtime
             }
         }
 
+        public void FinishExercise()
+        {
+            if (HasAnimalExercise)
+            {
+                animalExercise.iFace.FinishExercise(animalExercise.instance);
+            }
+        }
+
         public void CompleteExercise()
         {
             if (HasAnimalExercise)
             {
-                animalExercise.iFace.Complete(animalExercise.instance);
+                animalExercise.iFace.CompleteExercise(animalExercise.instance);
             }
         }
     }

@@ -41,10 +41,16 @@ namespace Rover.Core.Components
 
             SaveData saveData = instance.data as SaveData;
             
-            if (saveData.currentState == ExerciseState.InProgess &&
-                GameTime.ElapsedSecondsUntilNow(saveData.exerciseStartTime) >= exerciseCountdownInSeconds)
+            if (saveData.currentState == ExerciseState.InProgess)
             {
-                FinishExercise(instance);
+                if (GameTime.ElapsedSecondsUntilNow(saveData.exerciseStartTime) >= exerciseCountdownInSeconds)
+                {
+                    FinishExercise(instance);
+                }
+                else
+                {
+                    SetUpExerciseCallback(instance);
+                }
             }
         }
 
@@ -72,8 +78,8 @@ namespace Rover.Core.Components
                 SaveData saveData = instance.data as SaveData;
                 saveData.currentState = ExerciseState.InProgess;
                 saveData.exerciseStartTime = GameTime.UtcNow;
-                instance.events.ComponentDataChanged.Invoke();
-                exerciseCompleteCallbackHandle = scheduledCallbacks.Schedule(saveData.exerciseStartTime + exerciseCountdownInSeconds, () => FinishExercise(instance));
+
+                SetUpExerciseCallback(instance);
             }
         }
 
@@ -91,7 +97,7 @@ namespace Rover.Core.Components
             }
         }
 
-        public void Complete(Instance instance)
+        public void CompleteExercise(Instance instance)
         {
             ExerciseState exerciseState = GetExerciseState(instance);
             UnityEngine.Debug.Assert(exerciseState == ExerciseState.WaitingToComplete,
@@ -134,5 +140,16 @@ namespace Rover.Core.Components
             long elapsedTime = GetElapsedTime(instance);
             return (float)elapsedTime / exerciseCountdownInSeconds;
         }
+
+        #region Utility
+
+        private void SetUpExerciseCallback(Instance instance)
+        {
+            SaveData saveData = instance.data as SaveData;
+            instance.events.ComponentDataChanged.Invoke();
+            exerciseCompleteCallbackHandle = scheduledCallbacks.Schedule(saveData.exerciseStartTime + exerciseCountdownInSeconds, () => FinishExercise(instance));
+        }
+
+        #endregion
     }
 }
