@@ -16,4 +16,6 @@ MonoBehaviour:
   menuPriority: 0
   requestRecord: {fileID: 11400000, guid: 291e49cc8ddc0c34a9d5c3f83f6ae044, type: 2}
   animalCatalogue: {fileID: 11400000, guid: d8720027cec7b1944935fab39a9461a5, type: 2}
+  acceptRequestEvent: {fileID: 11400000, guid: 6e189301624f05d4c886a61ddec34785, type: 2}
+  declineRequestEvent: {fileID: 11400000, guid: 84b48361613013b48aa139b087324ec7, type: 2}
   animalEntriesPerPage: 10

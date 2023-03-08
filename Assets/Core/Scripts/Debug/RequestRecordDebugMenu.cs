@@ -15,6 +15,8 @@ namespace Rover.Core.Debug
 
         [SerializeField] private RequestRecord requestRecord;
         [SerializeField] private AnimalCatalogue animalCatalogue;
+        [SerializeField] private RequestEvent acceptRequestEvent;
+        [SerializeField] private RequestEvent declineRequestEvent;
         [SerializeField] private int animalEntriesPerPage = 10;
 
         private int currentPage = 0;
@@ -66,13 +68,13 @@ namespace Rover.Core.Debug
                         {
                             if (GUILayout.Button("Accept", GUILayout.ExpandWidth(false)))
                             {
-                                requestRecord.AcceptRequest(request);
+                                acceptRequestEvent.Invoke(request);
                             }
                         }
 
                         if (GUILayout.Button("Decline", GUILayout.ExpandWidth(false)))
                         {
-                            requestRecord.RemoveRequest(request);
+                            declineRequestEvent.Invoke(request);
                         }
                     }
                 }
